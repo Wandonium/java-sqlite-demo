@@ -1,0 +1,5 @@
+com\hillarywando\sqlitedemo\SqliteDemo.class
+com\hillarywando\sqlitedemo\util\DatabaseConnection.class
+com\hillarywando\sqlitedemo\model\Border$BorderBuilder.class
+com\hillarywando\sqlitedemo\model\Border.class
+com\hillarywando\sqlitedemo\dao\BorderDAO.class
