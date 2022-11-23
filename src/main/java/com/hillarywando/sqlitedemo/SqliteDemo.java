@@ -18,9 +18,10 @@ public class SqliteDemo {
 
     public static void main(String[] args) {
         DatabaseConnection.dbConnect();
-        if(DatabaseConnection.conn == null) {
-            DatabaseConnection.createDB();
-        }
+//        if(DatabaseConnection.conn == null) {
+//            System.out.println("connection is null so we create the db....");
+//            DatabaseConnection.createDB();
+//        }
         Date now = new Date();
         Timestamp timestamp = new Timestamp(now.getTime());
 //        Border border = new Border(0, "127.0.0.1", 3307, 
@@ -43,12 +44,12 @@ public class SqliteDemo {
             System.out.println("insert rows: " + rows);
             ArrayList<Border> borders = borderDao.get();
             System.out.println("borders: " + borders);
-            Border num2 = borderDao.get(borders.get(1).getId());
+            Border num2 = borderDao.get(borders.get(0).getId());
             System.out.println("borders number 2: " + num2);
             num2.setUser_name("bioprint");
             num2.setPassword("secret");
-//            borderDao.update(num2);
-            borderDao.delete(num2.getId());
+            borderDao.update(num2);
+//            borderDao.delete(num2.getId());
         } catch (SQLException ex) {
             Logger.getLogger(SqliteDemo.class.getName()).log(
                     Level.SEVERE, null, ex);
