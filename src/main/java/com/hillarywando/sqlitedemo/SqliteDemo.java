@@ -18,10 +18,6 @@ public class SqliteDemo {
 
     public static void main(String[] args) {
         DatabaseConnection.dbConnect();
-//        if(DatabaseConnection.conn == null) {
-//            System.out.println("connection is null so we create the db....");
-//            DatabaseConnection.createDB();
-//        }
         Date now = new Date();
         Timestamp timestamp = new Timestamp(now.getTime());
 //        Border border = new Border(0, "127.0.0.1", 3307, 

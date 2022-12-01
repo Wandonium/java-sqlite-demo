@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 import lombok.Setter;;
 
 /**
@@ -21,7 +22,7 @@ import lombok.Setter;;
 @AllArgsConstructor(access = AccessLevel.PUBLIC)
 public class Border {
     
-    private int id;
+    @NonNull private Integer id;
     private String server_id;
     private int server_port;
     private String database_name;

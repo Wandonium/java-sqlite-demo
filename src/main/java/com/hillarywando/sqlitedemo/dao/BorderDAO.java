@@ -55,8 +55,8 @@ public class BorderDAO {
         ResultSet rs = ps.executeQuery();
         ArrayList<Border> ls = new ArrayList();
         while (rs.next()) {
-//            Border b = new Border();
-            Border b = Border.builder().build();
+            Border b = new Border();
+//            Border b = Border.builder().build();
             b.setId(rs.getInt("id"));
             b.setServer_id(rs.getString("server_id"));
             b.setServer_port(rs.getInt("server_port"));
@@ -72,8 +72,8 @@ public class BorderDAO {
     public Border get(int id) throws SQLException {
         String query = "select * from Border where id = " + id;
         PreparedStatement ps = conn.prepareStatement(query);
-//        Border b = new Border();
-        Border b = Border.builder().build();
+        Border b = new Border();
+//        Border b = Border.builder().build();
         ResultSet rs = ps.executeQuery();
         boolean check = false;
         while (rs.next()) {
